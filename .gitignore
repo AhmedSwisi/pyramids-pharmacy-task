@@ -1,0 +1,58 @@
+# General
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+__pycache__/
+*.py[cod]
+*.so
+
+# Python/Django
+db.sqlite3
+env/
+venv/
+.env
+*.pyc
+*.pyo
+migrations/
+
+# Django Cache and Logs
+staticfiles/
+media/
+*.log
+*.pot
+*.py[cod]
+django_debug.log
+
+# Vite/React/Node
+frontend/node_modules/
+frontend/.cache/
+frontend/.vite/
+frontend/dist/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+frontend/.DS_Store
+
+# Docker
+docker-compose.override.yml
+*.dockerfile
+*.tar
+.Dockerfile
+.dockerignore
+
+# IDE and Editor
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS-specific
+.DS_Store
+Thumbs.db
