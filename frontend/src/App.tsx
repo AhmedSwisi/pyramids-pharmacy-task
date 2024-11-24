@@ -1,20 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import { Route,Routes } from 'react-router';
+import LoginPage from './pages/LoginPage';
+import HomePage from './pages/HomePage';
+import Dashboard from './pages/Dashboard';
+import RegisterPage from './pages/RegisterPage';
+import AuthGuard from './components/ui/AuthGuard';
 
 function App() {
-  const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    axios.get('http://localhost:8000/api/hello/')
-      .then(response => setMessage(response.data.message))
-      .catch(error => console.error(error));
-  }, []);
-
   return (
-    <div>
-      <h1>React + DRF App</h1>
-      <p>{message}</p>
-    </div>
+    <Routes>
+      <Route path="/login" element={<LoginPage />} />
+      <Route path='/register' element={<RegisterPage />}/>
+      <Route path="/" element={<AuthGuard><HomePage /></AuthGuard>} />
+      <Route path="/dashboard" element={<AuthGuard><Dashboard /></AuthGuard>} />
+    </Routes>
   );
 }
 
