@@ -71,4 +71,6 @@ python manage.py migrate
 Frontend: http://localhost:3000.  
 Backend: http://localhost:8000.  
 
+### 6. Documentation:  
+A postman collection JSON file is included as well to view the api routes
 
